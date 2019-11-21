@@ -15,77 +15,227 @@ html {
     }
   }
 
+/* Defaults */
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    margin: 0%;
-    background-color: #ccffcc;
-    color: #00994db9;
-    box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 0%;
+  background-color: #0F1F38;
+  color: rgb(165, 148, 141);
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  width: fit-content;
+}
+
+.box {
+  height: auto;
+  width: fit-content;
+  margin: 0%;
+  background-color: rgb(32, 54, 88);
+  align-items: center;
 }
 
 /* Header */
 
 .header {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #0F1F38;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  height: 10%;
+  width: 100%;
+  background-color: #0F1F38;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 
 .header li {
-    display: inline;
-    padding-right: 3.0rem;
+  display: inline;
+  padding-right: 4.0rem;
 }
 
 .header li a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: rgb(165, 148, 141);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(165, 148, 141);
 }
 
+a:visited {
+  color: gray;
+}
+
+a:hover{
+  color: rgb(241, 129, 109);
+}
 
 /* Banner */
 .banner { 
-    display: flex;
-    justify-content: left;
-    align-items: bottom;
-    padding: 4%;
-    height: 39rem;
-    background: url("http://devlinphotos.co.uk/wp-content/uploads/2016/01/Frames-and-Albums-Devlin-Photos-010-1080x675.jpg") center center no-repeat;
-    background-size: cover;
-    background-color: #0F1F38;
-    color:rgb(255, 69, 56);
-    font-family: 'Josefin Sans', sans-serif;
+  align-items: bottom;
+  margin: 0%;
+  padding: 0%;
+  height: 39rem;
+  background: url("http://devlinphotos.co.uk/wp-content/uploads/2016/01/Frames-and-Albums-Devlin-Photos-010-1080x675.jpg") center center no-repeat;
+  background-size: cover;
+  background-color: #0F1F38;
+  color:rgb(255, 69, 56);
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .banner h1 {
-    padding top: 0.3rem 0;
-    font-size: 8rem;
-    letter-spacing: 1%;
+  position: relative;
+  top: -2%;
+  left: 2%;
+  font-size: 10rem;
+  letter-spacing: 1%;
+  animation-name: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
+
+@keyframes heading {
+  0% {top: -20rem;}
+  100% {top: 0rem;}
+}
+
 
 .banner h2 {
-  padding-top:17.7rem;
+  position: relative;
+  top: -21%;
+  left: 2%;
   justify-content: left;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  animation-name: heading2;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
+  /*
+  animation-delay: 0.5s;*/
 }
 
+@keyframes heading2 {
+  0% {left: -30rem;}
+  100% {left: 2rem;}
+}
 
+.section { 
+  display: inline-block;
+  margin: 0;
+  padding: 1% 10%;
+  height: auto;
+  color: rgb(255, 255, 255);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.box p {
+  position: relative;
+  font-size: 3rem;
+  color:rgb(255, 69, 56);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#about-me {
+  display: inline-block;
+  width: 100%;
+  align-items: top;
+}
+
+#about-me img {
+  width: 40%;
+  display: inline-block;
+  padding-right: 5%;
+}
+
+#about-me .about-me-info {
+  color: rgb(165, 148, 141);
+  display: inline-block;
+  width: 45%;
+  line-height: 3rem;
+  font-size: 200%;
+  padding-bottom: 1%;
+}
+
+.text p {
+  color: rgb(165, 148, 141);
+  display: inline-block;
+  width: 100%;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  border-top: dotted;
+  text-align: justify;
+  padding-top: 2%;
+}
+
+#skills {
+  align-items: bottom;
+  margin: 0%;
+  padding: 0%;
+  height: 30rem;
+  background: url("https://ae01.alicdn.com/kf/HTB1VVnbqf5TBuNjSspcq6znGFXaH/rustic-Light-wood-texture-old-natural-table-top-Vintage-backgrounds-Vinyl-cloth-High-quality-Computer-print.jpg") center center no-repeat;
+  background-size: cover;
+  background-color: #0F1F38;
+}
+
+#skills p {
+  position: relative;
+  padding: 5% 10%;
+  font-size: 3rem;
+  color:rgb(255, 69, 56);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#projects .container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+.photo {
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+  margin: 2% 0;
+  transition: all 1s ease-in-out;
+}
+
+.photo:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+#contact-me {
+  align-items: bottom;
+  margin: 0%;
+  padding: 0%;
+  height: 30rem;
+  background: url("https://ae01.alicdn.com/kf/HTB1VVnbqf5TBuNjSspcq6znGFXaH/rustic-Light-wood-texture-old-natural-table-top-Vintage-backgrounds-Vinyl-cloth-High-quality-Computer-print.jpg") center center no-repeat;
+  background-size: cover;
+  background-color: #0F1F38;
+}
+
+#contact-me p {
+  position: relative;
+  padding: 5% 10%;
+  font-size: 3rem;
+  color:rgb(255, 69, 56);
+  font-family: 'Josefin Sans', sans-serif;
+}
 
 /* Footer */
 
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: bottom;
+footer .section {
+  height: 1000%;
   padding: 0 1%;
-  background-color: #212121;
+  background-color: #0F1F38;
 }
 
-footer .image-container {
-  width: 400px;
-}
